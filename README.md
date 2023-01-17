@@ -1,4 +1,4 @@
-# PLANT-IT
+# PLANT'IT
 
 Société PLANT'IT située à Lyon, start-up experte en développement d'applications dans le domaine de la biodiviersité et biologie végétale ainsi que dans l'écologie.
 
