@@ -8,7 +8,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/PlantIt.BLL" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -37,7 +37,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675878222745</updated>
       <workItem from="1675878224517" duration="51000" />
-      <workItem from="1675878278617" duration="2687000" />
+      <workItem from="1675878278617" duration="2961000" />
     </task>
     <task id="LOCAL-00001" summary="[fix] change the folder containing the project">
       <created>1675878661743</created>
@@ -74,7 +74,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675881143183</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="[test] test">
+      <created>1675881359294</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675881359294</updated>
+    </task>
+    <task id="LOCAL-00007" summary="[test] test">
+      <created>1675881444593</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675881444593</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
