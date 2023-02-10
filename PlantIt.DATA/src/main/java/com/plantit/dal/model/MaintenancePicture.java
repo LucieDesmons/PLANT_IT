@@ -8,11 +8,14 @@ import java.util.Date;
 @Table(name = "maintenancepicture")
 public class MaintenancePicture {
 
+    @Id
     @Column(name = "Maintenance_idMaintenance")
     private int maintenanceIdMaintenance;
 
+    @Id
     @Column(name = "Picture_idPicture")
     private int PictureIdPicture;
+
 
     /***** GETTER & SETTER *****/
 

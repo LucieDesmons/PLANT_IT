@@ -6,9 +6,11 @@ import jakarta.persistence.*;
 @Table(name = "maintenanceuser")
 public class MaintenanceUser {
 
+    @Id
     @Column(name = "Maintenance_idMaintenance")
     private int maintenanceIdMaintenance;
 
+    @Id
     @Column(name = "User_idUser")
     private int userIdUser;
 
@@ -30,6 +32,7 @@ public class MaintenanceUser {
     public void setUserIdUser(int userIdUser) {
         this.userIdUser = userIdUser;
     }
+
 
     /***** CONSTRUCTOR *****/
 

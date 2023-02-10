@@ -8,9 +8,11 @@ import java.util.Date;
 @Table(name = "created_by")
 public class CreatedBy {
 
+    @Id
     @Column(name = "PlantReference_idPlantReference")
     private int idPlantReference;
 
+    @Id
     @Column(name = "User_idUser")
     private int userIdUser;
 

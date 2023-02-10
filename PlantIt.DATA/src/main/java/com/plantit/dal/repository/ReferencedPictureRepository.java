@@ -2,9 +2,10 @@ package com.plantit.dal.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
-import com.plantit.dal.model.PictureReference;
+import com.plantit.dal.model.ReferencedPicture;
+
 
 @Repository
-public interface PictureReferenceRepository extends JpaRepository<PictureReference, Long> {
+public interface ReferencedPictureRepository extends JpaRepository<ReferencedPicture, Integer> {
 
 }

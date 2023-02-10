@@ -6,9 +6,11 @@ import jakarta.persistence.*;
 @Table(name = "plantconversation")
 public class PlantConversation {
 
+    @Id
     @Column(name = "Plant_idPlant")
     private int plantIdPlant;
 
+    @Id
     @Column(name = "Conversation_idConversation")
     private int conversationIdConversation;
 

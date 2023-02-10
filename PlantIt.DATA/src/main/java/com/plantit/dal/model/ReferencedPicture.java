@@ -6,9 +6,11 @@ import jakarta.persistence.*;
 @Table(name = "referencedpicture")
 public class ReferencedPicture {
 
+    @Id
     @Column(name = "PlantReference_idPlantReference")
     private int plantReferenceIdPlantReference;
 
+    @Id
     @Column(name = "PictureReference_idPictureReference")
     private int pictureReferenceIdPictureReference;
 
