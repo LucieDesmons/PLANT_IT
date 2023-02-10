@@ -2,6 +2,8 @@ package com.plantit.dal.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "usertype")
 public class UserType {
@@ -13,6 +15,12 @@ public class UserType {
 
     @Column(name = "label")
     private String label;
+
+
+    /***** COLLECTION *****/
+
+    @OneToMany(mappedBy="userType")
+    private Set<User> userCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -31,6 +39,14 @@ public class UserType {
 
     public void setLabel(String label) {
         this.label = label;
+    }
+
+    public Set<User> getUserCollection() {
+        return userCollection;
+    }
+
+    public void setUserCollection(Set<User> userCollection) {
+        this.userCollection = userCollection;
     }
 
 

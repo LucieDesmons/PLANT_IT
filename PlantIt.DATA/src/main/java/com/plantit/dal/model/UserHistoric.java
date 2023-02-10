@@ -19,9 +19,9 @@ public class UserHistoric {
     @Column(name = "endDate")
     private Date endDate;
 
-    @Id
-    @Column(name = "User_idUser")
-    private int userIdUser;
+    @ManyToOne
+    @JoinColumn(name="User_idUser", nullable=false)
+    private User user;
 
 
     /***** GETTER & SETTER *****/
@@ -50,12 +50,12 @@ public class UserHistoric {
         this.endDate = endDate;
     }
 
-    public int getUserIdUser() {
-        return userIdUser;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserIdUser(int userIdUser) {
-        this.userIdUser = userIdUser;
+    public void setUser(User user) {
+        this.user = user;
     }
 
 
@@ -65,11 +65,11 @@ public class UserHistoric {
 
     }
 
-    public UserHistoric(Date startDate, Date endDate, int userIdUser) {
+    public UserHistoric(Date startDate, Date endDate, User user) {
         super();
         this.startDate = startDate;
         this.endDate = endDate;
-        this.userIdUser = userIdUser;
+        this.user = user;
     }
 
 
@@ -77,7 +77,7 @@ public class UserHistoric {
 
     @Override
     public String toString() {
-        return "UserHistoric [startDate=" + startDate + ", endDate=" + endDate + ", userIdUser=" + userIdUser + "]";
+        return "UserHistoric [startDate=" + startDate + ", endDate=" + endDate + ", user=" + user.getIdUser() + "]";
     }
 
 }

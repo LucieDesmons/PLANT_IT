@@ -26,6 +26,9 @@ public class Address {
     @Column(name = "town")
     private String town;
 
+    @OneToOne(mappedBy = "address")
+    private User user;
+
 
     /***** GETTER & SETTER *****/
 
@@ -75,6 +78,14 @@ public class Address {
 
     public void setTown(String town) {
         this.town = town;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
 

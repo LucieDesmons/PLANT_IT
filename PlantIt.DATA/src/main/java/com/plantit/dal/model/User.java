@@ -2,6 +2,8 @@ package com.plantit.dal.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "user")
 public class User {
@@ -38,17 +40,35 @@ public class User {
     @Column(name = "hobbies")
     private String hobbies;
 
-    @Id
-    @Column(name = "idGodfather")
-    private int idGodfather;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "Address", referencedColumnName = "idAddress")
+    private Address address;
 
-    @Id
-    @Column(name = "Address")
-    private int address;
+    @ManyToOne
+    @JoinColumn(name="idGodfather", nullable=true)
+    private User godFather;
 
-    @Id
-    @Column(name = "UserType_idUserType")
-    private int userTypeIdUserType;
+    @ManyToOne
+    @JoinColumn(name="UserType_idUserType", nullable=false)
+    private UserType userType;
+
+
+    /***** COLLECTION *****/
+
+    @OneToMany(mappedBy="user1")
+    private Set<Conversation> conversationCollection;
+
+    @OneToMany(mappedBy="user")
+    private Set<UserHistoric> userHistoricCollection;
+
+    @OneToMany(mappedBy="user")
+    private Set<PasswordHistoric> passwordHistoricCollection;
+
+    @OneToMany(mappedBy="godFather")
+    private Set<User> godFatherCollection;
+
+    @ManyToMany
+    private Set<Maintenance> maintenanceCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -133,28 +153,68 @@ public class User {
         this.hobbies = hobbies;
     }
 
-    public int getIdGodfather() {
-        return idGodfather;
-    }
-
-    public void setIdGodfather(int idGodfather) {
-        this.idGodfather = idGodfather;
-    }
-
-    public int getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(int address) {
+    public void setAddress(Address address) {
         this.address = address;
     }
 
-    public int getUserTypeIdUserType() {
-        return userTypeIdUserType;
+    public User getGodFather() {
+        return godFather;
     }
 
-    public void setUserTypeIdUserType(int userTypeIdUserType) {
-        this.userTypeIdUserType = userTypeIdUserType;
+    public void setGodFather(User godFather) {
+        this.godFather = godFather;
+    }
+
+    public UserType getUserType() {
+        return userType;
+    }
+
+    public void setUserType(UserType userType) {
+        this.userType = userType;
+    }
+
+    public Set<Conversation> getConversationCollection() {
+        return conversationCollection;
+    }
+
+    public void setConversationCollection(Set<Conversation> conversationCollection) {
+        this.conversationCollection = conversationCollection;
+    }
+
+    public Set<UserHistoric> getUserHistoricCollection() {
+        return userHistoricCollection;
+    }
+
+    public void setUserHistoricCollection(Set<UserHistoric> userHistoricCollection) {
+        this.userHistoricCollection = userHistoricCollection;
+    }
+
+    public Set<PasswordHistoric> getPasswordHistoricCollection() {
+        return passwordHistoricCollection;
+    }
+
+    public void setPasswordHistoricCollection(Set<PasswordHistoric> passwordHistoricCollection) {
+        this.passwordHistoricCollection = passwordHistoricCollection;
+    }
+
+    public Set<User> getGodFatherCollection() {
+        return godFatherCollection;
+    }
+
+    public void setGodFatherCollection(Set<User> godFatherCollection) {
+        this.godFatherCollection = godFatherCollection;
+    }
+
+    public Set<Maintenance> getMaintenanceCollection() {
+        return maintenanceCollection;
+    }
+
+    public void setMaintenanceCollection(Set<Maintenance> maintenanceCollection) {
+        this.maintenanceCollection = maintenanceCollection;
     }
 
 
@@ -165,7 +225,7 @@ public class User {
     }
 
     public User(String name, String firstName, String phone, String email, String login, String password, String degree,
-                String specialization, String hobbies, int idGodfather, int address, int userTypeIdUserType) {
+                String specialization, String hobbies, User godFather, Address address, UserType userType) {
         super();
         this.name = name;
         this.firstName = firstName;
@@ -176,9 +236,9 @@ public class User {
         this.degree = degree;
         this.specialization = specialization;
         this.hobbies = hobbies;
-        this.idGodfather = idGodfather;
+        this.godFather = godFather;
         this.address = address;
-        this.userTypeIdUserType = userTypeIdUserType;
+        this.userType = userType;
     }
 
 
@@ -189,7 +249,7 @@ public class User {
         return "User [name=" + name + ", firstName=" + firstName + ", phone=" + phone +
                 "email=" + email + ", login=" + login + ", password=" + password +
                 "degree=" + degree + ", specialization=" + specialization + ", hobbies=" + hobbies +
-                "idGodfather=" + idGodfather + ", address=" + address + ", userTypeIdUserType=" + userTypeIdUserType +"]";
+                "idGodfather=" + godFather.getIdUser() + ", address=" + address + ", userType=" + userType.getLabel() +"]";
     }
 
 }

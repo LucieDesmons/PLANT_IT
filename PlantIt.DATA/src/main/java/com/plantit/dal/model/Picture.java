@@ -3,6 +3,7 @@ package com.plantit.dal.model;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "picture")
@@ -18,6 +19,12 @@ public class Picture {
 
     @Column(name = "updateDate")
     private Date updateDate;
+
+
+    /***** COLLECTION *****/
+
+    @ManyToMany
+    Set<Maintenance> maintenanceCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -46,7 +53,15 @@ public class Picture {
         this.updateDate = updateDate;
     }
 
+    public Set<Maintenance> getMaintenanceCollection() {
+        return maintenanceCollection;
+    }
 
+    public void setMaintenanceCollection(Set<Maintenance> maintenanceCollection) {
+        this.maintenanceCollection = maintenanceCollection;
+    }
+
+    
     /***** CONSTRUCTOR *****/
 
     public Picture() {

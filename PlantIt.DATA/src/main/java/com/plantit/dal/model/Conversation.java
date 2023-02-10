@@ -2,6 +2,8 @@ package com.plantit.dal.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "conversation")
 public class Conversation {
@@ -11,13 +13,19 @@ public class Conversation {
     @Column(name = "idConversation")
     private Long idConversation;
 
-    @Id
-    @Column(name = "User_id1")
-    private int userId1;
+    @ManyToOne
+    @JoinColumn(name="User_id1", nullable = false)
+    private User user1;
 
-    @Id
-    @Column(name = "User_id2")
-    private int userId2;
+    @ManyToOne
+    @JoinColumn(name="User_id2", nullable = false)
+    private User user2;
+
+
+    /***** COLLECTION *****/
+
+    @OneToMany(mappedBy="conversation")
+    private Set<Message> messageCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -30,20 +38,28 @@ public class Conversation {
         this.idConversation = idConversation;
     }
 
-    public int getUserId1() {
-        return userId1;
+    public User getUser1() {
+        return user1;
     }
 
-    public void setUserId1(int userId1) {
-        this.userId1 = userId1;
+    public void setUser1(User user1) {
+        this.user1 = user1;
     }
 
-    public int getUserId2() {
-        return userId2;
+    public User getUser2() {
+        return user2;
     }
 
-    public void setUserId2(int userId2) {
-        this.userId2 = userId2;
+    public void setUser2(User user2) {
+        this.user2 = user2;
+    }
+
+    public Set<Message> getMessageCollection() {
+        return messageCollection;
+    }
+
+    public void setMessageCollection(Set<Message> messageCollection) {
+        this.messageCollection = messageCollection;
     }
 
 
@@ -53,10 +69,10 @@ public class Conversation {
 
     }
 
-    public Conversation(int userId1, int userId2) {
+    public Conversation(User user1, User user2) {
         super();
-        this.userId1 = userId1;
-        this.userId2 = userId2;
+        this.user1 = user1;
+        this.user2 = user2;
     }
 
 
@@ -64,7 +80,7 @@ public class Conversation {
 
     @Override
     public String toString() {
-        return "Conversation [userId1=" + userId1 + ", userId2=" + userId2 + "]";
+        return "Conversation [user1=" + user1.getIdUser() + ", user2=" + user2.getIdUser() + "]";
     }
 
 }

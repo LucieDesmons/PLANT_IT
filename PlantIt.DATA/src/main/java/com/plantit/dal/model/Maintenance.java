@@ -3,6 +3,7 @@ package com.plantit.dal.model;
 import jakarta.persistence.*;
 
 import java.util.Date;
+import java.util.Set;
 
 @Entity
 @Table(name = "maintenance")
@@ -21,6 +22,23 @@ public class Maintenance {
 
     @Column(name = "report")
     private String report;
+
+
+    /***** JOIN TABLE *****/
+
+    @ManyToMany
+    @JoinTable(
+            name = "maintenancepicture",
+            joinColumns = @JoinColumn(name = "Maintenance_idMaintenance"),
+            inverseJoinColumns = @JoinColumn(name = "Picture_idPicture"))
+    private Set<Picture> pictureCollection;
+
+    @ManyToMany
+    @JoinTable(
+            name = "maintenanceuser",
+            joinColumns = @JoinColumn(name = "Maintenance_idMaintenance"),
+            inverseJoinColumns = @JoinColumn(name = "User_idUser"))
+    private Set<User> userCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -55,6 +73,22 @@ public class Maintenance {
 
     public void setReport(String report) {
         this.report = report;
+    }
+
+    public Set<Picture> getPictureCollection() {
+        return pictureCollection;
+    }
+
+    public void setPictureCollection(Set<Picture> pictureCollection) {
+        this.pictureCollection = pictureCollection;
+    }
+
+    public Set<User> getUserCollection() {
+        return userCollection;
+    }
+
+    public void setUserCollection(Set<User> userCollection) {
+        this.userCollection = userCollection;
     }
 
 

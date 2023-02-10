@@ -19,9 +19,9 @@ public class PasswordHistoric {
     @Column(name = "updateDate")
     private Date updateDate;
 
-    @Id
-    @Column(name = "User_idUser")
-    private int userIdUser;
+    @ManyToOne
+    @JoinColumn(name="User_idUser", nullable=false)
+    private User user;
 
 
     /***** GETTER & SETTER *****/
@@ -50,12 +50,12 @@ public class PasswordHistoric {
         this.updateDate = updateDate;
     }
 
-    public int getUserIdUser() {
-        return userIdUser;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserIdUser(int userIdUser) {
-        this.userIdUser = userIdUser;
+    public void setUser(User user) {
+        this.user = user;
     }
 
 
@@ -65,11 +65,11 @@ public class PasswordHistoric {
 
     }
 
-    public PasswordHistoric(String password, Date updateDate, int userIdUser) {
+    public PasswordHistoric(String password, Date updateDate, User user) {
         super();
         this.password = password;
         this.updateDate = updateDate;
-        this.userIdUser = userIdUser;
+        this.user = user;
     }
 
 
@@ -77,7 +77,7 @@ public class PasswordHistoric {
 
     @Override
     public String toString() {
-        return "PasswordHistoric [password=" + password + ", updateDate=" + updateDate + ", userIdUser=" + userIdUser + "]";
+        return "PasswordHistoric [password=" + password + ", updateDate=" + updateDate + ", idUser=" + user.getIdUser() + "]";
     }
 
 }

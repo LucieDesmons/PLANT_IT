@@ -8,13 +8,18 @@ import java.util.Date;
 @Table(name = "manage")
 public class Manage {
 
-    @Id
-    @Column(name = "User_idCustomer")
-    private int userIdCustomer;
+    @EmbeddedId
+    ManageKey idManage;
 
-    @Id
-    @Column(name = "User_idBotanist")
-    private int userIdBotanist;
+    @ManyToOne
+    @MapsId("idUser")
+    @JoinColumn(name = "User_idCustomer")
+    User userIdCustomer;
+
+    @ManyToOne
+    @MapsId("idUser")
+    @JoinColumn(name = "User_idBotanist")
+    User userIdBotanist;
 
     @Column(name = "Start_date")
     private Date startDate;
@@ -25,19 +30,27 @@ public class Manage {
 
     /***** GETTER & SETTER *****/
 
-    public int getUserIdCustomer() {
+    public ManageKey getIdManage() {
+        return idManage;
+    }
+
+    public void setIdManage(ManageKey idManage) {
+        this.idManage = idManage;
+    }
+
+    public User getUserIdCustomer() {
         return userIdCustomer;
     }
 
-    public void setUserIdCustomer(int userIdCustomer) {
+    public void setUserIdCustomer(User userIdCustomer) {
         this.userIdCustomer = userIdCustomer;
     }
 
-    public int getUserIdBotanist() {
+    public User getUserIdBotanist() {
         return userIdBotanist;
     }
 
-    public void setUserIdBotanist(int userIdBotanist) {
+    public void setUserIdBotanist(User userIdBotanist) {
         this.userIdBotanist = userIdBotanist;
     }
 
@@ -64,7 +77,7 @@ public class Manage {
 
     }
 
-    public Manage(int userIdCustomer, int userIdBotanist, Date startDate, Date endDate) {
+    public Manage(User userIdCustomer, User userIdBotanist, Date startDate, Date endDate) {
         super();
         this.userIdCustomer = userIdCustomer;
         this.userIdBotanist = userIdBotanist;
@@ -77,7 +90,7 @@ public class Manage {
 
     @Override
     public String toString() {
-        return "Manage [userIdCustomer" + userIdCustomer + "userIdBotanist=" + userIdBotanist + "startDate" + startDate + "endDate=" + endDate +"]";
+        return "Manage [userIdCustomer" + userIdCustomer.getIdUser() + "userIdBotanist=" + userIdBotanist.getIdUser() + "startDate" + startDate + "endDate=" + endDate +"]";
     }
 
 }

@@ -19,9 +19,9 @@ public class Message {
     @Column(name = "updateDate")
     private Date updateDate;
 
-    @Id
-    @Column(name = "Conversation_idConversation")
-    private int conversationIdConversation;
+    @ManyToOne
+    @JoinColumn(name="Conversation_idConversation", nullable=false)
+    private Conversation conversation;
 
 
     /***** GETTER & SETTER *****/
@@ -50,12 +50,12 @@ public class Message {
         this.updateDate = updateDate;
     }
 
-    public int getConversationIdConversation() {
-        return conversationIdConversation;
+    public Conversation getConversation() {
+        return conversation;
     }
 
-    public void setConversationIdConversation(int conversationIdConversation) {
-        this.conversationIdConversation = conversationIdConversation;
+    public void setConversation(Conversation conversation) {
+        this.conversation = conversation;
     }
 
 
@@ -65,11 +65,11 @@ public class Message {
 
     }
 
-    public Message(String label, Date updateDate, int conversationIdConversation) {
+    public Message(String label, Date updateDate, Conversation conversation) {
         super();
         this.label = label;
         this.updateDate = updateDate;
-        this.conversationIdConversation = conversationIdConversation;
+        this.conversation = conversation;
     }
 
 
@@ -77,7 +77,8 @@ public class Message {
 
     @Override
     public String toString() {
-        return "Message [label=" + label + ", updateDate=" + updateDate + ", conversationIdConversation=" + conversationIdConversation + "]";
+        return "Message [label=" + label + ", updateDate=" + updateDate + ", idConversation=" + conversation.getIdConversation() +
+                ", users conversation=" + conversation.getUser1() +  conversation.getUser2() + "]";
     }
 
 }
