@@ -2,6 +2,8 @@ package com.plantit.dal.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "conversation")
 public class Conversation {
@@ -16,6 +18,9 @@ public class Conversation {
 
     @Column(name = "User_id2")
     private int userId2;
+
+    @ManyToMany(mappedBy = "plantConversation")
+    Set<Plant> plantCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -42,6 +47,14 @@ public class Conversation {
 
     public void setUserId2(int userId2) {
         this.userId2 = userId2;
+    }
+
+    public Set<Plant> getPlantCollection() {
+        return plantCollection;
+    }
+
+    public void setPlantCollection(Set<Plant> plantCollection) {
+        this.plantCollection = plantCollection;
     }
 
 

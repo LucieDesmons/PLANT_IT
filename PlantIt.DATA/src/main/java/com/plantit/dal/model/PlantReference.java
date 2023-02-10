@@ -2,6 +2,8 @@ package com.plantit.dal.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "plantreference")
 public class PlantReference {
@@ -28,6 +30,12 @@ public class PlantReference {
 
     @Column(name = "placeLife")
     private String placeLife;
+
+    @OneToMany(mappedBy = "CreatedBy")
+    Set<User> user;
+
+    @ManyToMany(mappedBy = "referencedPicture")
+    Set<PictureReference> pictureReferenceCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -86,6 +94,22 @@ public class PlantReference {
 
     public void setPlaceLife(String placeLife) {
         this.placeLife = placeLife;
+    }
+
+    public Set<PictureReference> getPictureReferenceCollection() {
+        return pictureReferenceCollection;
+    }
+
+    public void setPictureReferenceCollection(Set<PictureReference> pictureReferenceCollection) {
+        this.pictureReferenceCollection = pictureReferenceCollection;
+    }
+
+    public Set<User> getUser() {
+        return user;
+    }
+
+    public void setUser(Set<User> user) {
+        this.user = user;
     }
 
 
