@@ -23,10 +23,10 @@ public class Picture {
 
     /***** COLLECTION *****/
 
-    @ManyToMany
+    @ManyToMany(mappedBy = "pictureCollection")
     Set<Maintenance> maintenanceCollection;
 
-    @ManyToMany(mappedBy = "plantPicture")
+    @ManyToMany(mappedBy = "pictureCollection")
     Set<Plant> plantCollection;
 
 

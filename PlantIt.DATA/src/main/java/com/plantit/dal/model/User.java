@@ -69,8 +69,11 @@ public class User {
     @ManyToMany
     private Set<Maintenance> maintenanceCollection;
 
-    @OneToMany(mappedBy = "User")
+    @OneToMany(mappedBy = "createdByCollection")
     Set<PlantReference> plantReferenceCollection;
+
+    @OneToMany(mappedBy="user")
+    private Set<Plant> plantCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -226,6 +229,15 @@ public class User {
     public void setPlantReferenceCollection(Set<PlantReference> plantReferenceCollection) {
         this.plantReferenceCollection = plantReferenceCollection;
     }
+
+    public Set<Plant> getPlantCollection() {
+        return plantCollection;
+    }
+
+    public void setPlantCollection(Set<Plant> plantCollection) {
+        this.plantCollection = plantCollection;
+    }
+
 
     /***** CONSTRUCTOR *****/
 

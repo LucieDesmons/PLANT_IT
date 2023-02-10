@@ -27,7 +27,7 @@ public class Conversation {
     @OneToMany(mappedBy="conversation")
     private Set<Message> messageCollection;
 
-    @ManyToMany(mappedBy = "plantConversation")
+    @ManyToMany(mappedBy = "conversationCollection")
     Set<Plant> plantCollection;
 
 

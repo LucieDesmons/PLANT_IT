@@ -31,10 +31,16 @@ public class PlantReference {
     @Column(name = "placeLife")
     private String placeLife;
 
-    @OneToMany(mappedBy = "CreatedBy")
-    Set<User> user;
 
-    @ManyToMany(mappedBy = "referencedPicture")
+    /***** COLLECTION *****/
+
+    @OneToMany(mappedBy = "plantReference")
+    Set<CreatedBy> createdByCollection;
+
+    @OneToMany(mappedBy="plantReference")
+    private Set<Plant> plantCollection;
+
+    @ManyToMany(mappedBy = "plantReferenceCollection")
     Set<PictureReference> pictureReferenceCollection;
 
 
@@ -96,20 +102,28 @@ public class PlantReference {
         this.placeLife = placeLife;
     }
 
+    public Set<CreatedBy> getCreatedByCollection() {
+        return createdByCollection;
+    }
+
+    public void setCreatedByCollection(Set<CreatedBy> createdByCollection) {
+        this.createdByCollection = createdByCollection;
+    }
+
+    public Set<Plant> getPlantCollection() {
+        return plantCollection;
+    }
+
+    public void setPlantCollection(Set<Plant> plantCollection) {
+        this.plantCollection = plantCollection;
+    }
+
     public Set<PictureReference> getPictureReferenceCollection() {
         return pictureReferenceCollection;
     }
 
     public void setPictureReferenceCollection(Set<PictureReference> pictureReferenceCollection) {
         this.pictureReferenceCollection = pictureReferenceCollection;
-    }
-
-    public Set<User> getUser() {
-        return user;
-    }
-
-    public void setUser(Set<User> user) {
-        this.user = user;
     }
 
 

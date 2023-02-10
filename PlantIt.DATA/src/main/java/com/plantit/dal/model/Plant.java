@@ -25,13 +25,13 @@ public class Plant {
     @Column(name = "clarity")
     private String clarity;
 
-    @Id
-    @Column(name = "User_idUser")
-    private int userIdUser;
+    @ManyToOne
+    @JoinColumn(name="User_idUser", nullable=false)
+    private User user;
 
-    @Id
-    @Column(name = "idPlantReference")
-    private int idPlantReference;
+    @ManyToOne
+    @JoinColumn(name="idPlantReference")
+    private PlantReference plantReference;
 
     @ManyToMany
     @JoinTable(
@@ -92,20 +92,20 @@ public class Plant {
         this.clarity = clarity;
     }
 
-    public int getUserIdUser() {
-        return userIdUser;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserIdUser(int userIdUser) {
-        this.userIdUser = userIdUser;
+    public void setUser(User user) {
+        this.user = user;
     }
 
-    public int getIdPlantReference() {
-        return idPlantReference;
+    public PlantReference getPlantReference() {
+        return plantReference;
     }
 
-    public void setIdPlantReference(int idPlantReference) {
-        this.idPlantReference = idPlantReference;
+    public void setPlantReference(PlantReference plantReference) {
+        this.plantReference = plantReference;
     }
 
     public Set<Picture> getPictureCollection() {
@@ -131,14 +131,14 @@ public class Plant {
 
     }
 
-    public Plant(String placePlant, String container, int humidity, String clarity, int userIdUser, int idPlantReference) {
+    public Plant(String placePlant, String container, int humidity, String clarity, User user, PlantReference plantReference) {
         super();
         this.placePlant = placePlant;
         this.container = container;
         this.humidity = humidity;
         this.clarity = clarity;
-        this.userIdUser = userIdUser;
-        this.idPlantReference = idPlantReference;
+        this.user = user;
+        this.plantReference = plantReference;
     }
 
 
@@ -147,7 +147,7 @@ public class Plant {
     @Override
     public String toString() {
         return "Plant [placePlant=" + placePlant + ", container=" + container + ", humidity=" + humidity +
-                "clarity=" + clarity + ", userIdUser=" + userIdUser + ", idPlantReference=" + idPlantReference +"]";
+                "clarity=" + clarity + ", idUser=" + user.getIdUser() + ", idPlantReference=" + plantReference.getIdPlantReference() +"]";
     }
 
 }

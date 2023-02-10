@@ -11,6 +11,12 @@ public class CreatedBy {
     @EmbeddedId
     CreatedByKey id;
 
+    @Column(name = "orderNum")
+    private int orderNum;
+
+    @Column(name = "updateDate")
+    private Date updateDate;
+
     @ManyToOne
     @MapsId("idPlantReference")
     @JoinColumn(name = "PlantReference_idPlantReference")
@@ -20,12 +26,6 @@ public class CreatedBy {
     @MapsId("idUser")
     @JoinColumn(name = "User_idUser")
     User user;
-
-    @Column(name = "orderNum")
-    private int orderNum;
-
-    @Column(name = "updateDate")
-    private Date updateDate;
 
 
     /***** GETTER & SETTER *****/
