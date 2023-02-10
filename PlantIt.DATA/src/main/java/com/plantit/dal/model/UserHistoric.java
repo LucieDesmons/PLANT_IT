@@ -19,6 +19,7 @@ public class UserHistoric {
     @Column(name = "endDate")
     private Date endDate;
 
+    @Id
     @Column(name = "User_idUser")
     private int userIdUser;
 
