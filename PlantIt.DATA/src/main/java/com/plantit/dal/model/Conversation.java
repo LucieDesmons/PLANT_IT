@@ -13,9 +13,11 @@ public class Conversation {
     @Column(name = "idConversation")
     private Long idConversation;
 
+    @Id
     @Column(name = "User_id1")
     private int userId1;
 
+    @Id
     @Column(name = "User_id2")
     private int userId2;
 

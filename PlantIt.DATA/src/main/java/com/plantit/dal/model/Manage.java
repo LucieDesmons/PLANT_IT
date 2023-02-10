@@ -8,9 +8,11 @@ import java.util.Date;
 @Table(name = "manage")
 public class Manage {
 
+    @Id
     @Column(name = "User_idCustomer")
     private int userIdCustomer;
 
+    @Id
     @Column(name = "User_idBotanist")
     private int userIdBotanist;
 

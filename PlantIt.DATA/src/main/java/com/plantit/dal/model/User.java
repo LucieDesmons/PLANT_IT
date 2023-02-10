@@ -39,12 +39,15 @@ public class User {
     @Column(name = "hobbies")
     private String hobbies;
 
+    @Id
     @Column(name = "idGodfather")
     private int idGodfather;
 
+    @Id
     @Column(name = "Address")
     private int address;
 
+    @Id
     @Column(name = "UserType_idUserType")
     private int userTypeIdUserType;
 

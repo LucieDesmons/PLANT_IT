@@ -19,6 +19,7 @@ public class Message {
     @Column(name = "updateDate")
     private Date updateDate;
 
+    @Id
     @Column(name = "Conversation_idConversation")
     private int conversationIdConversation;
 

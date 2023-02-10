@@ -25,9 +25,11 @@ public class Plant {
     @Column(name = "clarity")
     private String clarity;
 
+    @Id
     @Column(name = "User_idUser")
     private int userIdUser;
 
+    @Id
     @Column(name = "idPlantReference")
     private int idPlantReference;
 

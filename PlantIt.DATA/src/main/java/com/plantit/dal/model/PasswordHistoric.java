@@ -19,6 +19,7 @@ public class PasswordHistoric {
     @Column(name = "updateDate")
     private Date updateDate;
 
+    @Id
     @Column(name = "User_idUser")
     private int userIdUser;
 
