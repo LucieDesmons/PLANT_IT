@@ -1,7 +1,6 @@
 package com.plantit.dal.model;
 
 import jakarta.persistence.*;
-
 import java.util.Set;
 
 @Entity
@@ -69,6 +68,9 @@ public class User {
 
     @ManyToMany
     private Set<Maintenance> maintenanceCollection;
+
+    @OneToMany(mappedBy = "User")
+    Set<PlantReference> plantReferenceCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -217,6 +219,13 @@ public class User {
         this.maintenanceCollection = maintenanceCollection;
     }
 
+    public Set<PlantReference> getPlantReferenceCollection() {
+        return plantReferenceCollection;
+    }
+
+    public void setPlantReferenceCollection(Set<PlantReference> plantReferenceCollection) {
+        this.plantReferenceCollection = plantReferenceCollection;
+    }
 
     /***** CONSTRUCTOR *****/
 

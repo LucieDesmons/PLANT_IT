@@ -26,6 +26,9 @@ public class Picture {
     @ManyToMany
     Set<Maintenance> maintenanceCollection;
 
+    @ManyToMany(mappedBy = "plantPicture")
+    Set<Plant> plantCollection;
+
 
     /***** GETTER & SETTER *****/
 
@@ -56,12 +59,20 @@ public class Picture {
     public Set<Maintenance> getMaintenanceCollection() {
         return maintenanceCollection;
     }
+    public Set<Plant> getPlantCollection() {
+        return plantCollection;
+    }
+
+    public void setPlantCollection(Set<Plant> plantCollection) {
+        this.plantCollection = plantCollection;
+    }
+
 
     public void setMaintenanceCollection(Set<Maintenance> maintenanceCollection) {
         this.maintenanceCollection = maintenanceCollection;
     }
 
-    
+
     /***** CONSTRUCTOR *****/
 
     public Picture() {

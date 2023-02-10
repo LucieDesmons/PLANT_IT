@@ -8,13 +8,18 @@ import java.util.Date;
 @Table(name = "created_by")
 public class CreatedBy {
 
-    @Id
-    @Column(name = "PlantReference_idPlantReference")
-    private int idPlantReference;
+    @EmbeddedId
+    CreatedByKey id;
 
-    @Id
-    @Column(name = "User_idUser")
-    private int userIdUser;
+    @ManyToOne
+    @MapsId("idPlantReference")
+    @JoinColumn(name = "PlantReference_idPlantReference")
+    PlantReference plantReference;
+
+    @ManyToOne
+    @MapsId("idUser")
+    @JoinColumn(name = "User_idUser")
+    User user;
 
     @Column(name = "orderNum")
     private int orderNum;
@@ -25,20 +30,28 @@ public class CreatedBy {
 
     /***** GETTER & SETTER *****/
 
-    public int getIdPlantReference() {
-        return idPlantReference;
+    public CreatedByKey getId() {
+        return id;
     }
 
-    public void setIdPlantReference(int idPlantReference) {
-        this.idPlantReference = idPlantReference;
+    public void setId(CreatedByKey id) {
+        this.id = id;
     }
 
-    public int getUserIdUser() {
-        return userIdUser;
+    public PlantReference getPlantReference() {
+        return plantReference;
     }
 
-    public void setUserIdUser(int userIdUser) {
-        this.userIdUser = userIdUser;
+    public void setPlantReference(PlantReference plantReference) {
+        this.plantReference = plantReference;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getOrderNum() {
@@ -64,10 +77,10 @@ public class CreatedBy {
 
     }
 
-    public CreatedBy(int idPlantReference, int userIdUser, int orderNum, Date updateDate) {
+    public CreatedBy(PlantReference PlantReference, User user, int orderNum, Date updateDate) {
         super();
-        this.idPlantReference = idPlantReference;
-        this.userIdUser = userIdUser;
+        this.plantReference = PlantReference;
+        this.user = user;
         this.orderNum = orderNum;
         this.updateDate = updateDate;
     }
@@ -77,7 +90,8 @@ public class CreatedBy {
 
     @Override
     public String toString() {
-        return "CreatedBy [idPlantReference" + idPlantReference + "userIdUser=" + userIdUser + ", orderNum=" + orderNum + "updateDate" + updateDate + "]";
+        return "CreatedBy [idPlantReference" + plantReference.getIdPlantReference() + "userIdUser=" + user.getIdUser()
+                + ", orderNum=" + orderNum + "updateDate" + updateDate + "]";
     }
 
 }

@@ -27,6 +27,9 @@ public class Conversation {
     @OneToMany(mappedBy="conversation")
     private Set<Message> messageCollection;
 
+    @ManyToMany(mappedBy = "plantConversation")
+    Set<Plant> plantCollection;
+
 
     /***** GETTER & SETTER *****/
 
@@ -60,6 +63,14 @@ public class Conversation {
 
     public void setMessageCollection(Set<Message> messageCollection) {
         this.messageCollection = messageCollection;
+    }
+
+    public Set<Plant> getPlantCollection() {
+        return plantCollection;
+    }
+
+    public void setPlantCollection(Set<Plant> plantCollection) {
+        this.plantCollection = plantCollection;
     }
 
 

@@ -2,6 +2,8 @@ package com.plantit.dal.model;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "plant")
 public class Plant {
@@ -30,6 +32,22 @@ public class Plant {
     @Id
     @Column(name = "idPlantReference")
     private int idPlantReference;
+
+    @ManyToMany
+    @JoinTable(
+            name = "plantPicture",
+            joinColumns = @JoinColumn(name = "Plant_idPlant"),
+            inverseJoinColumns = @JoinColumn(name = "Picture_idPicture")
+    )
+    Set<Picture> pictureCollection;
+
+    @ManyToMany
+    @JoinTable(
+            name = "plantConversation",
+            joinColumns = @JoinColumn(name = "Plant_idPlant"),
+            inverseJoinColumns = @JoinColumn(name = "Conversation_idConversation")
+    )
+    Set<Conversation> conversationCollection;
 
 
     /***** GETTER & SETTER *****/
@@ -89,6 +107,23 @@ public class Plant {
     public void setIdPlantReference(int idPlantReference) {
         this.idPlantReference = idPlantReference;
     }
+
+    public Set<Picture> getPictureCollection() {
+        return pictureCollection;
+    }
+
+    public void setPictureCollection(Set<Picture> pictureCollection) {
+        this.pictureCollection = pictureCollection;
+    }
+
+    public Set<Conversation> getConversationCollection() {
+        return conversationCollection;
+    }
+
+    public void setConversationCollection(Set<Conversation> conversationCollection) {
+        this.conversationCollection = conversationCollection;
+    }
+
 
     /***** CONSTRUCTOR *****/
 
