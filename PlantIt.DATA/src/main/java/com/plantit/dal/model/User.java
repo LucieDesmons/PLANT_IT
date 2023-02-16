@@ -70,7 +70,7 @@ public class User {
     private Set<Maintenance> maintenanceCollection;
 
     @OneToMany(mappedBy = "createdByCollection")
-    Set<PlantReference> plantReferenceCollection;
+    private Set<PlantReference> plantReferenceCollection;
 
     @OneToMany(mappedBy="user")
     private Set<Plant> plantCollection;

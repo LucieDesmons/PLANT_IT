@@ -26,7 +26,7 @@ public class PictureReference {
         joinColumns = @JoinColumn(name = "PlantReference_idPlantReference"),
         inverseJoinColumns = @JoinColumn(name = "PictureReference_idPictureReference")
     )
-    Set<PlantReference> plantReferenceCollection;
+    private Set<PlantReference> plantReferenceCollection;
 
 
     /***** GETTER & SETTER *****/

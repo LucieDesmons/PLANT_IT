@@ -9,24 +9,27 @@ import java.io.Serializable;
 public class CreatedByKey implements Serializable {
 
     @Column(name = "PlantReference_idPlantReference")
-    Long idPlantReference;
+    private int idPlantReference;
 
     @Column(name = "User_idUser")
-    Long idUser;
+    private int idUser;
 
-    public Long getIdPlantReference() {
+
+    /***** GETTER & SETTER *****/
+
+    public int getIdPlantReference() {
         return idPlantReference;
     }
 
-    public void setIdPlantReference(Long plantReferenceId) {
-        this.idPlantReference = plantReferenceId;
+    public void setIdPlantReference(int idPlantReference) {
+        this.idPlantReference = idPlantReference;
     }
 
-    public long getIdUser() {
+    public int getIdUser() {
         return idUser;
     }
 
-    public void setIdUser(long userId) {
-        this.idUser = userId;
+    public void setIdUser(int idUser) {
+        this.idUser = idUser;
     }
 }

@@ -9,7 +9,7 @@ import java.util.Date;
 public class CreatedBy {
 
     @EmbeddedId
-    CreatedByKey id;
+    private CreatedByKey id;
 
     @Column(name = "orderNum")
     private int orderNum;
@@ -20,12 +20,12 @@ public class CreatedBy {
     @ManyToOne
     @MapsId("idPlantReference")
     @JoinColumn(name = "PlantReference_idPlantReference")
-    PlantReference plantReference;
+    private PlantReference plantReference;
 
     @ManyToOne
     @MapsId("idUser")
     @JoinColumn(name = "User_idUser")
-    User user;
+    private User user;
 
 
     /***** GETTER & SETTER *****/

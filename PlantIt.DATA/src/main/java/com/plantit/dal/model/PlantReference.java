@@ -35,13 +35,13 @@ public class PlantReference {
     /***** COLLECTION *****/
 
     @OneToMany(mappedBy = "plantReference")
-    Set<CreatedBy> createdByCollection;
+    private Set<CreatedBy> createdByCollection;
 
     @OneToMany(mappedBy="plantReference")
     private Set<Plant> plantCollection;
 
     @ManyToMany(mappedBy = "plantReferenceCollection")
-    Set<PictureReference> pictureReferenceCollection;
+    private Set<PictureReference> pictureReferenceCollection;
 
 
     /***** GETTER & SETTER *****/

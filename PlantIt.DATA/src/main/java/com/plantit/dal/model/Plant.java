@@ -39,7 +39,7 @@ public class Plant {
             joinColumns = @JoinColumn(name = "Plant_idPlant"),
             inverseJoinColumns = @JoinColumn(name = "Picture_idPicture")
     )
-    Set<Picture> pictureCollection;
+    private Set<Picture> pictureCollection;
 
     @ManyToMany
     @JoinTable(
@@ -47,7 +47,7 @@ public class Plant {
             joinColumns = @JoinColumn(name = "Plant_idPlant"),
             inverseJoinColumns = @JoinColumn(name = "Conversation_idConversation")
     )
-    Set<Conversation> conversationCollection;
+    private Set<Conversation> conversationCollection;
 
 
     /***** GETTER & SETTER *****/

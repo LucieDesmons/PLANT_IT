@@ -9,17 +9,17 @@ import java.util.Date;
 public class Manage {
 
     @EmbeddedId
-    ManageKey idManage;
+    private ManageKey idManage;
 
     @ManyToOne
     @MapsId("idUser")
     @JoinColumn(name = "User_idCustomer")
-    User userIdCustomer;
+    private User userIdCustomer;
 
     @ManyToOne
     @MapsId("idUser")
     @JoinColumn(name = "User_idBotanist")
-    User userIdBotanist;
+    private User userIdBotanist;
 
     @Column(name = "Start_date")
     private Date startDate;
