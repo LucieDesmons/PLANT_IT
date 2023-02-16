@@ -3,8 +3,8 @@ package com.plantit.dal;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import com.plantit.dal.model.Address;
-import com.plantit.dal.repository.AddressRepository;
+import com.plantit.dal.entities.Address;
+import com.plantit.dal.repositories.AddressRepository;
 
 import java.util.List;
 
