@@ -10,10 +10,10 @@ public class Plant {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idPlant")
+    @Column(name = "id_plant")
     private Long idPlant;
 
-    @Column(name = "placePlant")
+    @Column(name = "place_plant")
     private String placePlant;
 
     @Column(name = "container")
@@ -26,26 +26,26 @@ public class Plant {
     private String clarity;
 
     @ManyToOne
-    @JoinColumn(name="User_idUser", nullable=false)
+    @JoinColumn(name="id_user", nullable=false)
     private User user;
 
     @ManyToOne
-    @JoinColumn(name="idPlantReference")
+    @JoinColumn(name="id_plant_reference")
     private PlantReference plantReference;
 
     @ManyToMany
     @JoinTable(
-            name = "plantPicture",
-            joinColumns = @JoinColumn(name = "Plant_idPlant"),
-            inverseJoinColumns = @JoinColumn(name = "Picture_idPicture")
+            name = "plant_picture",
+            joinColumns = @JoinColumn(name = "id_plant"),
+            inverseJoinColumns = @JoinColumn(name = "id_picture")
     )
     private Set<Picture> pictureCollection;
 
     @ManyToMany
     @JoinTable(
-            name = "plantConversation",
-            joinColumns = @JoinColumn(name = "Plant_idPlant"),
-            inverseJoinColumns = @JoinColumn(name = "Conversation_idConversation")
+            name = "plant_conversation",
+            joinColumns = @JoinColumn(name = "id_plant"),
+            inverseJoinColumns = @JoinColumn(name = "id_conversation")
     )
     private Set<Conversation> conversationCollection;
 

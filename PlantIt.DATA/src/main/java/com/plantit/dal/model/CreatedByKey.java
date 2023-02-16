@@ -8,10 +8,10 @@ import java.io.Serializable;
 @Embeddable
 public class CreatedByKey implements Serializable {
 
-    @Column(name = "PlantReference_idPlantReference")
+    @Column(name = "id_plant_reference")
     private int idPlantReference;
 
-    @Column(name = "User_idUser")
+    @Column(name = "id_user")
     private int idUser;
 
 

@@ -11,20 +11,20 @@ public class CreatedBy {
     @EmbeddedId
     private CreatedByKey id;
 
-    @Column(name = "orderNum")
+    @Column(name = "order_num")
     private int orderNum;
 
-    @Column(name = "updateDate")
+    @Column(name = "update_date")
     private Date updateDate;
 
     @ManyToOne
-    @MapsId("idPlantReference")
-    @JoinColumn(name = "PlantReference_idPlantReference")
+    @MapsId("id_plant_reference")
+    @JoinColumn(name = "id_plant_reference")
     private PlantReference plantReference;
 
     @ManyToOne
-    @MapsId("idUser")
-    @JoinColumn(name = "User_idUser")
+    @MapsId("id_user")
+    @JoinColumn(name = "id_user")
     private User user;
 
 

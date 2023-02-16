@@ -11,13 +11,13 @@ public class Picture {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idPicture")
+    @Column(name = "id_picture")
     private Long idPicture;
 
     @Column(name = "way")
     private String way;
 
-    @Column(name = "updateDate")
+    @Column(name = "update_date")
     private Date updateDate;
 
 

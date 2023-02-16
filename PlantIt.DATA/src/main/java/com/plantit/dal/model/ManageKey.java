@@ -8,10 +8,10 @@ import java.io.Serializable;
 @Embeddable
 public class ManageKey implements Serializable {
 
-    @Column(name = "User_idCustomer")
+    @Column(name = "id_user_customer")
     private int userIdCustomer;
 
-    @Column(name = "User_idBotanist")
+    @Column(name = "id_user_botanist")
     private int userIdBotanist;
 
 

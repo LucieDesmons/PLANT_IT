@@ -9,13 +9,13 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUser")
+    @Column(name = "id_user")
     private Long idUser;
 
     @Column(name = "name")
     private String name;
 
-    @Column(name = "firstName")
+    @Column(name = "first_name")
     private String firstName;
 
     @Column(name = "phone")
@@ -40,15 +40,15 @@ public class User {
     private String hobbies;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "Address", referencedColumnName = "idAddress")
+    @JoinColumn(name = "id_address", referencedColumnName = "id_address")
     private Address address;
 
     @ManyToOne
-    @JoinColumn(name="idGodfather", nullable=true)
+    @JoinColumn(name="id_godfather", nullable=true)
     private User godFather;
 
     @ManyToOne
-    @JoinColumn(name="UserType_idUserType", nullable=false)
+    @JoinColumn(name="id_user_type", nullable=false)
     private UserType userType;
 
 
@@ -69,8 +69,8 @@ public class User {
     @ManyToMany
     private Set<Maintenance> maintenanceCollection;
 
-    @OneToMany(mappedBy = "createdByCollection")
-    private Set<PlantReference> plantReferenceCollection;
+    @OneToMany(mappedBy = "user")
+    private Set<CreatedBy> createdByCollection;
 
     @OneToMany(mappedBy="user")
     private Set<Plant> plantCollection;
@@ -222,12 +222,12 @@ public class User {
         this.maintenanceCollection = maintenanceCollection;
     }
 
-    public Set<PlantReference> getPlantReferenceCollection() {
-        return plantReferenceCollection;
+    public Set<CreatedBy> getCreatedByCollection() {
+        return createdByCollection;
     }
 
-    public void setPlantReferenceCollection(Set<PlantReference> plantReferenceCollection) {
-        this.plantReferenceCollection = plantReferenceCollection;
+    public void setCreatedByCollection(Set<CreatedBy> createdByCollection) {
+        this.createdByCollection = createdByCollection;
     }
 
     public Set<Plant> getPlantCollection() {

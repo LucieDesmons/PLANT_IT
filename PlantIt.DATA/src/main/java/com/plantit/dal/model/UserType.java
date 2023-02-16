@@ -5,12 +5,12 @@ import jakarta.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "usertype")
+@Table(name = "user_type")
 public class UserType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUserType")
+    @Column(name = "id_user_type")
     private Long idUserType;
 
     @Column(name = "label")

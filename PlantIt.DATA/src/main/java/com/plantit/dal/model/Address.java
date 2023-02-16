@@ -8,19 +8,19 @@ public class Address {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idAddress")
+    @Column(name = "id_address")
     private Long idAddress;
 
     @Column(name = "number")
     private int number;
 
-    @Column(name = "postalCode")
+    @Column(name = "postal_code")
     private int postalCode;
 
     @Column(name = "way")
     private String way;
 
-    @Column(name = "additionalAddress")
+    @Column(name = "additional_address")
     private String additionalAddress;
 
     @Column(name = "town")

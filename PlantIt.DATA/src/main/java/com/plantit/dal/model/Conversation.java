@@ -10,15 +10,15 @@ public class Conversation {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idConversation")
+    @Column(name = "id_conversation")
     private Long idConversation;
 
     @ManyToOne
-    @JoinColumn(name="User_id1", nullable = false)
+    @JoinColumn(name="id_user_1", nullable = false)
     private User user1;
 
     @ManyToOne
-    @JoinColumn(name="User_id2", nullable = false)
+    @JoinColumn(name="id_user_2", nullable = false)
     private User user2;
 
 

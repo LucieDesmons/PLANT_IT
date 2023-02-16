@@ -10,17 +10,17 @@ public class Message {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idMessage")
+    @Column(name = "id_message")
     private Long idMessage;
 
     @Column(name = "label")
     private String label;
 
-    @Column(name = "updateDate")
+    @Column(name = "update_date")
     private Date updateDate;
 
     @ManyToOne
-    @JoinColumn(name="Conversation_idConversation", nullable=false)
+    @JoinColumn(name="id_conversation", nullable=false)
     private Conversation conversation;
 
 

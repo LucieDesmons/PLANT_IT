@@ -11,13 +11,13 @@ public class Maintenance {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idMaintenance")
+    @Column(name = "id_maintenance")
     private Long idMaintenance;
 
-    @Column(name = "predictedDate")
+    @Column(name = "predicted_date")
     private Date predictedDate;
 
-    @Column(name = "realizedDate")
+    @Column(name = "realized_date")
     private Date realizedDate;
 
     @Column(name = "report")
@@ -28,16 +28,16 @@ public class Maintenance {
 
     @ManyToMany
     @JoinTable(
-            name = "maintenancepicture",
-            joinColumns = @JoinColumn(name = "Maintenance_idMaintenance"),
-            inverseJoinColumns = @JoinColumn(name = "Picture_idPicture"))
+            name = "maintenance_picture",
+            joinColumns = @JoinColumn(name = "id_maintenance"),
+            inverseJoinColumns = @JoinColumn(name = "id_picture"))
     private Set<Picture> pictureCollection;
 
     @ManyToMany
     @JoinTable(
-            name = "maintenanceuser",
-            joinColumns = @JoinColumn(name = "Maintenance_idMaintenance"),
-            inverseJoinColumns = @JoinColumn(name = "User_idUser"))
+            name = "maintenance_user",
+            joinColumns = @JoinColumn(name = "id_maintenance"),
+            inverseJoinColumns = @JoinColumn(name = "id_user"))
     private Set<User> userCollection;
 
 

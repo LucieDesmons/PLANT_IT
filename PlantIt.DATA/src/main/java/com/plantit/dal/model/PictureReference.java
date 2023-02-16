@@ -6,25 +6,25 @@ import java.util.Date;
 import java.util.Set;
 
 @Entity
-@Table(name = "picturereference")
+@Table(name = "picture_reference")
 public class PictureReference {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idPictureReference")
+    @Column(name = "id_picture_reference")
     private Long idPictureReference;
 
     @Column(name = "way")
     private String way;
 
-    @Column(name = "modificationDate")
+    @Column(name = "modification_date")
     private Date modificationDate;
 
     @ManyToMany
     @JoinTable(
-        name = "referencedPicture",
-        joinColumns = @JoinColumn(name = "PlantReference_idPlantReference"),
-        inverseJoinColumns = @JoinColumn(name = "PictureReference_idPictureReference")
+        name = "reference_picture",
+        joinColumns = @JoinColumn(name = "id_plant_reference"),
+        inverseJoinColumns = @JoinColumn(name = "id_picture_reference")
     )
     private Set<PlantReference> plantReferenceCollection;
 

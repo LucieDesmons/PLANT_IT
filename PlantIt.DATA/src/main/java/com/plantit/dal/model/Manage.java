@@ -12,19 +12,19 @@ public class Manage {
     private ManageKey idManage;
 
     @ManyToOne
-    @MapsId("idUser")
-    @JoinColumn(name = "User_idCustomer")
-    private User userIdCustomer;
+    @MapsId("id_user")
+    @JoinColumn(name = "id_user_customer")
+    private User idUserCustomer;
 
     @ManyToOne
-    @MapsId("idUser")
-    @JoinColumn(name = "User_idBotanist")
-    private User userIdBotanist;
+    @MapsId("id_user")
+    @JoinColumn(name = "id_user_botanist")
+    private User idUserBotanist;
 
-    @Column(name = "Start_date")
+    @Column(name = "start_date")
     private Date startDate;
 
-    @Column(name = "End_date")
+    @Column(name = "end_date")
     private Date endDate;
 
 
@@ -38,20 +38,20 @@ public class Manage {
         this.idManage = idManage;
     }
 
-    public User getUserIdCustomer() {
-        return userIdCustomer;
+    public User getIdUserCustomer() {
+        return idUserCustomer;
     }
 
-    public void setUserIdCustomer(User userIdCustomer) {
-        this.userIdCustomer = userIdCustomer;
+    public void setIdUserCustomer(User idUserCustomer) {
+        this.idUserCustomer = idUserCustomer;
     }
 
-    public User getUserIdBotanist() {
-        return userIdBotanist;
+    public User getIdUserBotanist() {
+        return idUserBotanist;
     }
 
-    public void setUserIdBotanist(User userIdBotanist) {
-        this.userIdBotanist = userIdBotanist;
+    public void setIdUserBotanist(User idUserBotanist) {
+        this.idUserBotanist = idUserBotanist;
     }
 
     public Date getStartDate() {
@@ -77,10 +77,10 @@ public class Manage {
 
     }
 
-    public Manage(User userIdCustomer, User userIdBotanist, Date startDate, Date endDate) {
+    public Manage(User idUserCustomer, User idUserBotanist, Date startDate, Date endDate) {
         super();
-        this.userIdCustomer = userIdCustomer;
-        this.userIdBotanist = userIdBotanist;
+        this.idUserCustomer = idUserCustomer;
+        this.idUserBotanist = idUserBotanist;
         this.startDate = startDate;
         this.endDate = endDate;
     }
@@ -90,7 +90,7 @@ public class Manage {
 
     @Override
     public String toString() {
-        return "Manage [userIdCustomer" + userIdCustomer.getIdUser() + "userIdBotanist=" + userIdBotanist.getIdUser() + "startDate" + startDate + "endDate=" + endDate +"]";
+        return "Manage [userIdCustomer" + idUserCustomer.getIdUser() + "userIdBotanist=" + idUserBotanist.getIdUser() + "startDate" + startDate + "endDate=" + endDate +"]";
     }
 
 }

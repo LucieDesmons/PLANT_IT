@@ -5,22 +5,22 @@ import jakarta.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "userhistoric")
+@Table(name = "user_historic")
 public class UserHistoric {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idUserHistoric")
+    @Column(name = "id_user_historic")
     private Long idUserHistoric;
 
-    @Column(name = "startDate")
+    @Column(name = "start_date")
     private Date startDate;
 
-    @Column(name = "endDate")
+    @Column(name = "end_date")
     private Date endDate;
 
     @ManyToOne
-    @JoinColumn(name="User_idUser", nullable=false)
+    @JoinColumn(name="id_user", nullable=false)
     private User user;
 
 

@@ -5,12 +5,12 @@ import jakarta.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "plantreference")
+@Table(name = "plant_reference")
 public class PlantReference {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idPlantReference")
+    @Column(name = "id_plant_reference")
     private Long idPlantReference;
 
     @Column(name = "family")
@@ -19,7 +19,7 @@ public class PlantReference {
     @Column(name = "size")
     private int size;
 
-    @Column(name = "foodSource")
+    @Column(name = "food_source")
     private String foodSource;
 
     @Column(name = "reproduction")
@@ -28,7 +28,7 @@ public class PlantReference {
     @Column(name = "lifetime")
     private int lifetime;
 
-    @Column(name = "placeLife")
+    @Column(name = "place_life")
     private String placeLife;
 
 
