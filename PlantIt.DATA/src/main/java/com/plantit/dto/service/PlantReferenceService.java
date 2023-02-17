@@ -1,4 +1,16 @@
 package com.plantit.dto.service;
 
-public class PlantReferenceService {
+import com.plantit.dal.entities.PlantReference;
+
+import java.util.List;
+
+public interface PlantReferenceService {
+
+    PlantReference savePlantReference(PlantReference p);
+    PlantReference updatePlantReference(PlantReference p);
+    void deletePlantReference(PlantReference p);
+    void deletePlantReferenceById(Long id);
+    PlantReference getPlantReference(Long id);
+    List<PlantReference> getAllPlantReferences();
+
 }

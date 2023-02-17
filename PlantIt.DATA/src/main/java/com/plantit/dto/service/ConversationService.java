@@ -1,4 +1,16 @@
 package com.plantit.dto.service;
 
-public class ConversationService {
+import com.plantit.dal.entities.Conversation;
+
+import java.util.List;
+
+public interface ConversationService {
+
+    Conversation saveConversation(Conversation c);
+    Conversation updateConversation(Conversation c);
+    void deleteConversation(Conversation c);
+    void deleteConversationById(Long id);
+    Conversation getConversation(Long id);
+    List<Conversation> getAllConversations();
+
 }

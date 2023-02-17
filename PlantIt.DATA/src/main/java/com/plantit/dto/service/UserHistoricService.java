@@ -1,4 +1,16 @@
 package com.plantit.dto.service;
 
-public class UserHistoricService {
+import com.plantit.dal.entities.UserHistoric;
+
+import java.util.List;
+
+public interface UserHistoricService {
+
+    UserHistoric saveUserHistoric(UserHistoric u);
+    UserHistoric updateUserHistoric(UserHistoric u);
+    void deleteUserHistoric(UserHistoric u);
+    void deleteUserHistoricById(Long id);
+    UserHistoric getUserHistoric(Long id);
+    List<UserHistoric> getAllUserHistorics();
+
 }

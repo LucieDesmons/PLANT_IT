@@ -36,11 +36,10 @@ class AddressApplicationTests {
 		addressRepository.save(a);
 	}
 
-	//Nadhem Bel Hadj- nadhemb@yahoo.com Page 5 Spring Boot 2022
 	@Test
 	public void testDeleteAddress()
 	{
-		addressRepository.deleteById(2L);;
+		addressRepository.deleteById(8L);;
 	}
 
 	@Test

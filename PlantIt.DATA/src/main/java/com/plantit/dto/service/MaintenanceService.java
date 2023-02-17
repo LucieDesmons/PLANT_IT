@@ -1,4 +1,16 @@
 package com.plantit.dto.service;
 
-public class MaintenanceService {
+import com.plantit.dal.entities.Maintenance;
+
+import java.util.List;
+
+public interface MaintenanceService {
+
+    Maintenance saveMaintenance(Maintenance m);
+    Maintenance updateMaintenance(Maintenance m);
+    void deleteMaintenance(Maintenance m);
+    void deleteMaintenanceById(Long id);
+    Maintenance getMaintenance(Long id);
+    List<Maintenance> getAllMaintenances();
+
 }
