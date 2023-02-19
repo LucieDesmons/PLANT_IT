@@ -13,6 +13,9 @@ public class AddressServiceImpl implements AddressService {
     @Autowired
     AddressRepository addressRepository;
 
+    public Address createAddress(Address a) {
+        return addressRepository.save(a);
+    }
     public Address saveAddress(Address a) { return addressRepository.save(a); };
     public Address updateAddress(Address a) { return addressRepository.save(a); };
     public void deleteAddress(Address a) { addressRepository.delete(a); };

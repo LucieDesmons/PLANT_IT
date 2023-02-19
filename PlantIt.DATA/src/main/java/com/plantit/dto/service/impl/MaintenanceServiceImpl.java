@@ -14,6 +14,9 @@ public class MaintenanceServiceImpl implements MaintenanceService {
     @Autowired
     MaintenanceRepository maintenanceRepository;
 
+    public Maintenance createMaintenance(Maintenance m) {
+        return maintenanceRepository.save(m);
+    }
     public Maintenance saveMaintenance(Maintenance m) { return maintenanceRepository.save(m); };
     public Maintenance updateMaintenance(Maintenance m) { return maintenanceRepository.save(m); };
     public void deleteMaintenance(Maintenance m) { maintenanceRepository.delete(m); };

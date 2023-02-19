@@ -14,6 +14,9 @@ public class UserServiceImpl implements UserService {
     @Autowired
     UserRepository userRepository;
 
+    public User createUser(User u) {
+        return userRepository.save(u);
+    }
     public User saveUser(User u) { return userRepository.save(u); };
     public User updateUser(User u) { return userRepository.save(u); };
     public void deleteUser(User u) { userRepository.delete(u); };

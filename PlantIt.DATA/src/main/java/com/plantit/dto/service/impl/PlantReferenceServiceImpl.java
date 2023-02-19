@@ -14,6 +14,9 @@ public class PlantReferenceServiceImpl implements PlantReferenceService {
     @Autowired
     PlantReferenceRepository plantReferenceRepository;
 
+    public PlantReference createPlantReference(PlantReference p) {
+        return plantReferenceRepository.save(p);
+    }
     public PlantReference savePlantReference(PlantReference p) { return plantReferenceRepository.save(p); };
     public PlantReference updatePlantReference(PlantReference p) { return plantReferenceRepository.save(p); };
     public void deletePlantReference(PlantReference p) { plantReferenceRepository.delete(p); };

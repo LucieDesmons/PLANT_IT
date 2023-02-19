@@ -14,6 +14,9 @@ public class PictureServiceImpl implements PictureService {
     @Autowired
     PictureRepository pictureRepository;
 
+    public Picture createPicture(Picture p) {
+        return pictureRepository.save(p);
+    }
     public Picture savePicture(Picture p) { return pictureRepository.save(p); };
     public Picture updatePicture(Picture p) { return pictureRepository.save(p); };
     public void deletePicture(Picture p) { pictureRepository.delete(p); };

@@ -14,6 +14,9 @@ public class PictureReferenceServiceImpl implements PictureReferenceService {
     @Autowired
     PictureReferenceRepository pictureReferenceRepository;
 
+    public PictureReference createPictureReference(PictureReference p) {
+        return pictureReferenceRepository.save(p);
+    }
     public PictureReference savePictureReference(PictureReference p) { return pictureReferenceRepository.save(p); };
     public PictureReference updatePictureReference(PictureReference p) { return pictureReferenceRepository.save(p); };
     public void deletePictureReference(PictureReference p) { pictureReferenceRepository.delete(p); };

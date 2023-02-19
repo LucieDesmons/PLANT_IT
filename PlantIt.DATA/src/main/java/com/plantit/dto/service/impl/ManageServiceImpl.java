@@ -14,6 +14,9 @@ public class ManageServiceImpl implements ManageService {
     @Autowired
     ManageRepository manageRepository;
 
+    public Manage createManage(Manage m) {
+        return manageRepository.save(m);
+    }
     public Manage saveManage(Manage m) { return manageRepository.save(m); };
     public Manage updateManage(Manage m) { return manageRepository.save(m); };
     public void deleteManage(Manage m) { manageRepository.delete(m); };

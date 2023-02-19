@@ -13,6 +13,9 @@ public class ConversationServiceImpl implements ConversationService {
     @Autowired
     ConversationRepository conversationRepository;
 
+    public Conversation createConversation(Conversation c) {
+        return conversationRepository.save(c);
+    }
     public Conversation saveConversation(Conversation c) { return conversationRepository.save(c); };
     public Conversation updateConversation(Conversation c) { return conversationRepository.save(c); };
     public void deleteConversation(Conversation c) { conversationRepository.delete(c); };

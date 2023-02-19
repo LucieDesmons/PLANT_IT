@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface AddressService {
 
+    Address createAddress(Address a);
+
     Address saveAddress(Address a);
 
     Address updateAddress(Address a);

@@ -14,6 +14,9 @@ public class PlantServiceImpl implements PlantService {
     @Autowired
     PlantRepository plantRepository;
 
+    public Plant createPlant(Plant p) {
+        return plantRepository.save(p);
+    }
     public Plant savePlant(Plant p) { return plantRepository.save(p); };
     public Plant updatePlant(Plant p) { return plantRepository.save(p); };
     public void deletePlant(Plant p) { plantRepository.delete(p); };

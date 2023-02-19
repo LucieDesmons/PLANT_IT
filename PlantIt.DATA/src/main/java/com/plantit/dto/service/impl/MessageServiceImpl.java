@@ -14,6 +14,9 @@ public class MessageServiceImpl implements MessageService {
     @Autowired
     MessageRepository messageRepository;
 
+    public Message createMessage(Message m) {
+        return messageRepository.save(m);
+    }
     public Message saveMessage(Message m) { return messageRepository.save(m); };
     public Message updateMessage(Message m) { return messageRepository.save(m); };
     public void deleteMessage(Message m) { messageRepository.delete(m); };

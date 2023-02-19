@@ -14,6 +14,9 @@ public class UserHistoricServiceImpl implements UserHistoricService {
     @Autowired
     UserHistoricRepository userHistoricRepository;
 
+    public UserHistoric createUserHistoric(UserHistoric u) {
+        return userHistoricRepository.save(u);
+    }
     public UserHistoric saveUserHistoric(UserHistoric u) { return userHistoricRepository.save(u); };
     public UserHistoric updateUserHistoric(UserHistoric u) { return userHistoricRepository.save(u); };
     public void deleteUserHistoric(UserHistoric u) { userHistoricRepository.delete(u); };

@@ -14,6 +14,9 @@ public class CreatedByServiceImpl implements CreatedByService {
     @Autowired
     CreatedByRepository createdByRepository;
 
+    public CreatedBy createCreatedBy(CreatedBy c) {
+        return createdByRepository.save(c);
+    }
     public CreatedBy saveCreatedBy(CreatedBy c) { return createdByRepository.save(c); };
     public CreatedBy updateCreatedBy(CreatedBy c) { return createdByRepository.save(c); };
     public void deleteCreatedBy(CreatedBy c) { createdByRepository.delete(c); };

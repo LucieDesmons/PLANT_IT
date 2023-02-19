@@ -14,6 +14,9 @@ public class UserTypeServiceImpl implements UserTypeService {
     @Autowired
     UserTypeRepository userTypeRepository;
 
+    public UserType createUserType(UserType u) {
+        return userTypeRepository.save(u);
+    }
     @Override
     public UserType saveUserType(UserType u) {
         return userTypeRepository.save(u);
