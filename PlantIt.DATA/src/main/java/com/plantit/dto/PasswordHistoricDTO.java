@@ -4,20 +4,20 @@ import java.util.Date;
 
 public class PasswordHistoricDTO {
 
-    private Long idHistoric;
+    private Long idHistoricDTO;
     private String password;
     private Date updateDate;
-    private UserDTO user;
+    private UserDTO userDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdHistoric() {
-        return idHistoric;
+    public Long getIdHistoricDTO() {
+        return idHistoricDTO;
     }
 
-    public void setIdHistoric(Long idHistoric) {
-        this.idHistoric = idHistoric;
+    public void setIdHistoricDTO(Long idHistoricDTO) {
+        this.idHistoricDTO = idHistoricDTO;
     }
 
     public String getPassword() {
@@ -36,12 +36,12 @@ public class PasswordHistoricDTO {
         this.updateDate = updateDate;
     }
 
-    public UserDTO getUser() {
-        return user;
+    public UserDTO getUserDTO() {
+        return userDTO;
     }
 
-    public void setUser(UserDTO user) {
-        this.user = user;
+    public void setUserDTO(UserDTO userDTO) {
+        this.userDTO = userDTO;
     }
 
 

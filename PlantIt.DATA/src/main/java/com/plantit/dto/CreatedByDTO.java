@@ -4,21 +4,21 @@ import java.util.Date;
 
 public class CreatedByDTO {
 
-    private Long idCreatedBy;
+    private Long idCreatedByDTO;
     private int orderNum;
     private Date updateDate;
-    private PlantReferenceDTO plantReference;
-    private UserDTO user;
+    private PlantReferenceDTO plantReferenceDTO;
+    private UserDTO userDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdCreatedBy() {
-        return idCreatedBy;
+    public Long getIdCreatedByDTO() {
+        return idCreatedByDTO;
     }
 
-    public void setIdCreatedBy(Long idCreatedBy) {
-        this.idCreatedBy = idCreatedBy;
+    public void setIdCreatedByDTO(Long idCreatedByDTO) {
+        this.idCreatedByDTO = idCreatedByDTO;
     }
 
     public int getOrderNum() {
@@ -37,20 +37,20 @@ public class CreatedByDTO {
         this.updateDate = updateDate;
     }
 
-    public PlantReferenceDTO getPlantReference() {
-        return plantReference;
+    public PlantReferenceDTO getPlantReferenceDTO() {
+        return plantReferenceDTO;
     }
 
-    public void setPlantReference(PlantReferenceDTO plantReference) {
-        this.plantReference = plantReference;
+    public void setPlantReferenceDTO(PlantReferenceDTO plantReferenceDTO) {
+        this.plantReferenceDTO = plantReferenceDTO;
     }
 
-    public UserDTO getUser() {
-        return user;
+    public UserDTO getUserDTO() {
+        return userDTO;
     }
 
-    public void setUser(UserDTO user) {
-        this.user = user;
+    public void setUserDTO(UserDTO userDTO) {
+        this.userDTO = userDTO;
     }
 
 

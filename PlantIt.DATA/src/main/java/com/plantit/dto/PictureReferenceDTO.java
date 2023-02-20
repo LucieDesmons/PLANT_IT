@@ -1,24 +1,24 @@
 package com.plantit.dto;
 
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 public class PictureReferenceDTO {
 
-    private Long idPictureReference;
+    private Long idPictureReferenceDTO;
     private String way;
     private Date modificationDate;
-    private List<PlantReferenceDTO> plantReferenceCollection;
+    private Set<PlantReferenceDTO> plantReferenceCollectionDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdPictureReference() {
-        return idPictureReference;
+    public Long getIdPictureReferenceDTO() {
+        return idPictureReferenceDTO;
     }
 
-    public void setIdPictureReference(Long idPictureReference) {
-        this.idPictureReference = idPictureReference;
+    public void setIdPictureReferenceDTO(Long idPictureReferenceDTO) {
+        this.idPictureReferenceDTO = idPictureReferenceDTO;
     }
 
     public String getWay() {
@@ -37,12 +37,12 @@ public class PictureReferenceDTO {
         this.modificationDate = modificationDate;
     }
 
-    public List<PlantReferenceDTO> getPlantReferenceCollection() {
-        return plantReferenceCollection;
+    public Set<PlantReferenceDTO> getPlantReferenceCollectionDTO() {
+        return plantReferenceCollectionDTO;
     }
 
-    public void setPlantReferenceCollection(List<PlantReferenceDTO> plantReferenceCollection) {
-        this.plantReferenceCollection = plantReferenceCollection;
+    public void setPlantReferenceCollectionDTO(Set<PlantReferenceDTO> plantReferenceCollectionDTO) {
+        this.plantReferenceCollectionDTO = plantReferenceCollectionDTO;
     }
 
 

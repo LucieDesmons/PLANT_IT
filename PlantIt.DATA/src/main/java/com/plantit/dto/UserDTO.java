@@ -1,10 +1,15 @@
 package com.plantit.dto;
 
-import java.util.List;
+import java.util.Date;
+import java.util.Set;
 
 public class UserDTO {
 
-    private Long idUser;
+    public static final Long ADMIN_ID = 1L;
+    public static final Long BOTANIST_ID = 2L;
+    public static final Long CUSTUMER_ID = 3L;
+
+    private Long idUserDTO;
     private String name;
     private String firstName;
     private String phone;
@@ -14,26 +19,26 @@ public class UserDTO {
     private String degree;
     private String specialization;
     private String hobbies;
-    private AddressDTO address;
-    private UserDTO godFather;
-    private UserTypeDTO userType;
-    private List<ConversationDTO> conversationCollection;
-    private List<UserHistoricDTO> userHistoricCollection;
-    private List<PasswordHistoricDTO> passwordHistoricCollection;
-    private List<UserDTO> godFatherCollection;
-    private List<MaintenanceDTO> maintenanceCollection;
-    private List<CreatedByDTO> createdByCollection;
-    private List<PlantDTO> plantCollection;
+    private AddressDTO addressDTO;
+    private UserDTO godFatherDTO;
+    private UserTypeDTO userTypeDTO;
+    private Set<ConversationDTO> conversationCollectionDTO;
+    private Set<UserHistoricDTO> userHistoricCollectionDTO;
+    private Set<PasswordHistoricDTO> passwordHistoricCollectionDTO;
+    private Set<UserDTO> godFatherCollectionDTO;
+    private Set<MaintenanceDTO> maintenanceCollectionDTO;
+    private Set<CreatedByDTO> createdByCollectionDTO;
+    private Set<PlantDTO> plantCollectionDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdUser() {
-        return idUser;
+    public Long getIdUserDTO() {
+        return idUserDTO;
     }
 
-    public void setIdUser(Long idUser) {
-        this.idUser = idUser;
+    public void setIdUserDTO(Long idUserDTO) {
+        this.idUserDTO = idUserDTO;
     }
 
     public String getName() {
@@ -108,84 +113,84 @@ public class UserDTO {
         this.hobbies = hobbies;
     }
 
-    public AddressDTO getAddress() {
-        return address;
+    public AddressDTO getAddressDTO() {
+        return addressDTO;
     }
 
-    public void setAddress(AddressDTO address) {
-        this.address = address;
+    public void setAddressDTO(AddressDTO addressDTO) {
+        this.addressDTO = addressDTO;
     }
 
-    public UserDTO getGodFather() {
-        return godFather;
+    public UserDTO getGodFatherDTO() {
+        return godFatherDTO;
     }
 
-    public void setGodFather(UserDTO godFather) {
-        this.godFather = godFather;
+    public void setGodFatherDTO(UserDTO godFatherDTO) {
+        this.godFatherDTO = godFatherDTO;
     }
 
-    public UserTypeDTO getUserType() {
-        return userType;
+    public UserTypeDTO getUserTypeDTO() {
+        return userTypeDTO;
     }
 
-    public void setUserType(UserTypeDTO userType) {
-        this.userType = userType;
+    public void setUserTypeDTO(UserTypeDTO userTypeDTO) {
+        this.userTypeDTO = userTypeDTO;
     }
 
-    public List<ConversationDTO> getConversationCollection() {
-        return conversationCollection;
+    public Set<ConversationDTO> getConversationCollectionDTO() {
+        return conversationCollectionDTO;
     }
 
-    public void setConversationCollection(List<ConversationDTO> conversationCollection) {
-        this.conversationCollection = conversationCollection;
+    public void setConversationCollectionDTO(Set<ConversationDTO> conversationCollectionDTO) {
+        this.conversationCollectionDTO = conversationCollectionDTO;
     }
 
-    public List<UserHistoricDTO> getUserHistoricCollection() {
-        return userHistoricCollection;
+    public Set<UserHistoricDTO> getUserHistoricCollectionDTO() {
+        return userHistoricCollectionDTO;
     }
 
-    public void setUserHistoricCollection(List<UserHistoricDTO> userHistoricCollection) {
-        this.userHistoricCollection = userHistoricCollection;
+    public void setUserHistoricCollectionDTO(Set<UserHistoricDTO> userHistoricCollectionDTO) {
+        this.userHistoricCollectionDTO = userHistoricCollectionDTO;
     }
 
-    public List<PasswordHistoricDTO> getPasswordHistoricCollection() {
-        return passwordHistoricCollection;
+    public Set<PasswordHistoricDTO> getPasswordHistoricCollectionDTO() {
+        return passwordHistoricCollectionDTO;
     }
 
-    public void setPasswordHistoricCollection(List<PasswordHistoricDTO> passwordHistoricCollection) {
-        this.passwordHistoricCollection = passwordHistoricCollection;
+    public void setPasswordHistoricCollectionDTO(Set<PasswordHistoricDTO> passwordHistoricCollectionDTO) {
+        this.passwordHistoricCollectionDTO = passwordHistoricCollectionDTO;
     }
 
-    public List<UserDTO> getGodFatherCollection() {
-        return godFatherCollection;
+    public Set<UserDTO> getGodFatherCollectionDTO() {
+        return godFatherCollectionDTO;
     }
 
-    public void setGodFatherCollection(List<UserDTO> godFatherCollection) {
-        this.godFatherCollection = godFatherCollection;
+    public void setGodFatherCollectionDTO(Set<UserDTO> godFatherCollectionDTO) {
+        this.godFatherCollectionDTO = godFatherCollectionDTO;
     }
 
-    public List<MaintenanceDTO> getMaintenanceCollection() {
-        return maintenanceCollection;
+    public Set<MaintenanceDTO> getMaintenanceCollectionDTO() {
+        return maintenanceCollectionDTO;
     }
 
-    public void setMaintenanceCollection(List<MaintenanceDTO> maintenanceCollection) {
-        this.maintenanceCollection = maintenanceCollection;
+    public void setMaintenanceCollectionDTO(Set<MaintenanceDTO> maintenanceCollectionDTO) {
+        this.maintenanceCollectionDTO = maintenanceCollectionDTO;
     }
 
-    public List<CreatedByDTO> getCreatedByCollection() {
-        return createdByCollection;
+    public Set<CreatedByDTO> getCreatedByCollectionDTO() {
+        return createdByCollectionDTO;
     }
 
-    public void setCreatedByCollection(List<CreatedByDTO> createdByCollection) {
-        this.createdByCollection = createdByCollection;
+    public void setCreatedByCollectionDTO(Set<CreatedByDTO> createdByCollectionDTO) {
+        this.createdByCollectionDTO = createdByCollectionDTO;
     }
 
-    public List<PlantDTO> getPlantCollection() {
-        return plantCollection;
+    public Set<PlantDTO> getPlantCollectionDTO() {
+        return plantCollectionDTO;
     }
 
-    public void setPlantCollection(List<PlantDTO> plantCollection) {
-        this.plantCollection = plantCollection;
+    public void setPlantCollectionDTO(Set<PlantDTO> plantCollectionDTO) {
+        this.plantCollectionDTO = plantCollectionDTO;
     }
 
 

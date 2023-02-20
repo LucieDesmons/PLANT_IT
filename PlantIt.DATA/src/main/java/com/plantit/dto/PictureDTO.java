@@ -1,25 +1,25 @@
 package com.plantit.dto;
 
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 public class PictureDTO {
 
-    private Long idPicture;
+    private Long idPictureDTO;
     private String way;
     private Date updateDate;
-    private List<MaintenanceDTO> maintenanceCollection;
-    private List<PlantDTO> plantCollection;
+    private Set<MaintenanceDTO> maintenanceCollectionDTO;
+    private Set<PlantDTO> plantCollectionDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdPicture() {
-        return idPicture;
+    public Long getIdPictureDTO() {
+        return idPictureDTO;
     }
 
-    public void setIdPicture(Long idPicture) {
-        this.idPicture = idPicture;
+    public void setIdPictureDTO(Long idPictureDTO) {
+        this.idPictureDTO = idPictureDTO;
     }
 
     public String getWay() {
@@ -38,20 +38,20 @@ public class PictureDTO {
         this.updateDate = updateDate;
     }
 
-    public List<MaintenanceDTO> getMaintenanceCollection() {
-        return maintenanceCollection;
+    public Set<MaintenanceDTO> getMaintenanceCollectionDTO() {
+        return maintenanceCollectionDTO;
     }
 
-    public void setMaintenanceCollection(List<MaintenanceDTO> maintenanceCollection) {
-        this.maintenanceCollection = maintenanceCollection;
+    public void setMaintenanceCollectionDTO(Set<MaintenanceDTO> maintenanceCollectionDTO) {
+        this.maintenanceCollectionDTO = maintenanceCollectionDTO;
     }
 
-    public List<PlantDTO> getPlantCollection() {
-        return plantCollection;
+    public Set<PlantDTO> getPlantCollectionDTO() {
+        return plantCollectionDTO;
     }
 
-    public void setPlantCollection(List<PlantDTO> plantCollection) {
-        this.plantCollection = plantCollection;
+    public void setPlantCollectionDTO(Set<PlantDTO> plantCollectionDTO) {
+        this.plantCollectionDTO = plantCollectionDTO;
     }
 
 

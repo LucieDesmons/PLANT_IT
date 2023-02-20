@@ -4,21 +4,20 @@ import java.util.Date;
 
 public class MessageDTO {
 
-    private Long idMessage;
+    private Long idMessageDTO;
     private String label;
-    private UserDTO idUserBotanist;
     private Date updateDate;
-    private ConversationDTO conversation;
+    private ConversationDTO conversationDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdMessage() {
-        return idMessage;
+    public Long getIdMessageDTO() {
+        return idMessageDTO;
     }
 
-    public void setIdMessage(Long idMessage) {
-        this.idMessage = idMessage;
+    public void setIdMessageDTO(Long idMessageDTO) {
+        this.idMessageDTO = idMessageDTO;
     }
 
     public String getLabel() {
@@ -29,14 +28,6 @@ public class MessageDTO {
         this.label = label;
     }
 
-    public UserDTO getIdUserBotanist() {
-        return idUserBotanist;
-    }
-
-    public void setIdUserBotanist(UserDTO idUserBotanist) {
-        this.idUserBotanist = idUserBotanist;
-    }
-
     public Date getUpdateDate() {
         return updateDate;
     }
@@ -45,12 +36,12 @@ public class MessageDTO {
         this.updateDate = updateDate;
     }
 
-    public ConversationDTO getConversation() {
-        return conversation;
+    public ConversationDTO getConversationDTO() {
+        return conversationDTO;
     }
 
-    public void setConversation(ConversationDTO conversation) {
-        this.conversation = conversation;
+    public void setConversationDTO(ConversationDTO conversationDTO) {
+        this.conversationDTO = conversationDTO;
     }
 
 

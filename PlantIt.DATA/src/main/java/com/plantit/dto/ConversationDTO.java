@@ -1,56 +1,56 @@
 package com.plantit.dto;
 
-import java.util.List;
+import java.util.Set;
 
 public class ConversationDTO {
 
-    private Long idConversation;
-    private UserDTO user1;
-    private UserDTO user2;
-    private List<MessageDTO> messageCollection;
-    private List<PlantDTO> plantCollection;
+    private Long idConversationDTO;
+    private UserDTO user1DTO;
+    private UserDTO user2DTO;
+    private Set<MessageDTO> messageCollectionDTO;
+    private Set<PlantDTO> plantCollectionDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdConversation() {
-        return idConversation;
+    public Long getIdConversationDTO() {
+        return idConversationDTO;
     }
 
-    public void setIdConversation(Long idConversation) {
-        this.idConversation = idConversation;
+    public void setIdConversationDTO(Long idConversationDTO) {
+        this.idConversationDTO = idConversationDTO;
     }
 
-    public UserDTO getUser1() {
-        return user1;
+    public UserDTO getUser1DTO() {
+        return user1DTO;
     }
 
-    public void setUser1(UserDTO user1) {
-        this.user1 = user1;
+    public void setUser1DTO(UserDTO user1DTO) {
+        this.user1DTO = user1DTO;
     }
 
-    public UserDTO getUser2() {
-        return user2;
+    public UserDTO getUser2DTO() {
+        return user2DTO;
     }
 
-    public void setUser2(UserDTO user2) {
-        this.user2 = user2;
+    public void setUser2DTO(UserDTO user2DTO) {
+        this.user2DTO = user2DTO;
     }
 
-    public List<MessageDTO> getMessageCollection() {
-        return messageCollection;
+    public Set<MessageDTO> getMessageCollectionDTO() {
+        return messageCollectionDTO;
     }
 
-    public void setMessageCollection(List<MessageDTO> messageCollection) {
-        this.messageCollection = messageCollection;
+    public void setMessageCollectionDTO(Set<MessageDTO> messageCollectionDTO) {
+        this.messageCollectionDTO = messageCollectionDTO;
     }
 
-    public List<PlantDTO> getPlantCollection() {
-        return plantCollection;
+    public Set<PlantDTO> getPlantCollectionDTO() {
+        return plantCollectionDTO;
     }
 
-    public void setPlantCollection(List<PlantDTO> plantCollection) {
-        this.plantCollection = plantCollection;
+    public void setPlantCollectionDTO(Set<PlantDTO> plantCollectionDTO) {
+        this.plantCollectionDTO = plantCollectionDTO;
     }
 
 

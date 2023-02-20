@@ -1,29 +1,28 @@
 package com.plantit.dto;
 
-import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 public class PlantDTO {
 
-    private Long idPlant;
+    private Long idPlantDTO;
     private String placePlant;
     private String container;
     private int humidity;
     private String clarity;
-    private UserDTO user;
-    private PlantReferenceDTO plantReference;
-    private List<PictureDTO> pictureCollection;
-    private List<ConversationDTO> conversationCollection;
+    private UserDTO userDTO;
+    private PlantReferenceDTO plantReferenceDTO;
+    private Set<PictureDTO> pictureCollectionDTO;
+    private Set<ConversationDTO> conversationCollectionDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdPlant() {
-        return idPlant;
+    public Long getIdPlantDTO() {
+        return idPlantDTO;
     }
 
-    public void setIdPlant(Long idPlant) {
-        this.idPlant = idPlant;
+    public void setIdPlantDTO(Long idPlantDTO) {
+        this.idPlantDTO = idPlantDTO;
     }
 
     public String getPlacePlant() {
@@ -58,36 +57,36 @@ public class PlantDTO {
         this.clarity = clarity;
     }
 
-    public UserDTO getUser() {
-        return user;
+    public UserDTO getUserDTO() {
+        return userDTO;
     }
 
-    public void setUser(UserDTO user) {
-        this.user = user;
+    public void setUserDTO(UserDTO userDTO) {
+        this.userDTO = userDTO;
     }
 
-    public PlantReferenceDTO getPlantReference() {
-        return plantReference;
+    public PlantReferenceDTO getPlantReferenceDTO() {
+        return plantReferenceDTO;
     }
 
-    public void setPlantReference(PlantReferenceDTO plantReference) {
-        this.plantReference = plantReference;
+    public void setPlantReferenceDTO(PlantReferenceDTO plantReferenceDTO) {
+        this.plantReferenceDTO = plantReferenceDTO;
     }
 
-    public List<PictureDTO> getPictureCollection() {
-        return pictureCollection;
+    public Set<PictureDTO> getPictureCollectionDTO() {
+        return pictureCollectionDTO;
     }
 
-    public void setPictureCollection(List<PictureDTO> pictureCollection) {
-        this.pictureCollection = pictureCollection;
+    public void setPictureCollectionDTO(Set<PictureDTO> pictureCollectionDTO) {
+        this.pictureCollectionDTO = pictureCollectionDTO;
     }
 
-    public List<ConversationDTO> getConversationCollection() {
-        return conversationCollection;
+    public Set<ConversationDTO> getConversationCollectionDTO() {
+        return conversationCollectionDTO;
     }
 
-    public void setConversationCollection(List<ConversationDTO> conversationCollection) {
-        this.conversationCollection = conversationCollection;
+    public void setConversationCollectionDTO(Set<ConversationDTO> conversationCollectionDTO) {
+        this.conversationCollectionDTO = conversationCollectionDTO;
     }
 
 

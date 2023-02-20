@@ -1,22 +1,22 @@
 package com.plantit.dto;
 
-import java.util.List;
+import java.util.Set;
 
 public class UserTypeDTO {
 
-    private Long idUserType;
+    private Long idUserTypeDTO;
     private String label;
-    private List<UserDTO> userCollection;
+    private Set<UserDTO> userCollectionDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdUserType() {
-        return idUserType;
+    public Long getIdUserTypeDTO() {
+        return idUserTypeDTO;
     }
 
-    public void setIdUserType(Long idUserType) {
-        this.idUserType = idUserType;
+    public void setIdUserTypeDTO(Long idUserTypeDTO) {
+        this.idUserTypeDTO = idUserTypeDTO;
     }
 
     public String getLabel() {
@@ -27,12 +27,12 @@ public class UserTypeDTO {
         this.label = label;
     }
 
-    public List<UserDTO> getUserCollection() {
-        return userCollection;
+    public Set<UserDTO> getUserCollectionDTO() {
+        return userCollectionDTO;
     }
 
-    public void setUserCollection(List<UserDTO> userCollection) {
-        this.userCollection = userCollection;
+    public void setUserCollectionDTO(Set<UserDTO> userCollectionDTO) {
+        this.userCollectionDTO = userCollectionDTO;
     }
 
 

@@ -2,23 +2,23 @@ package com.plantit.dto;
 
 public class AddressDTO {
 
-    private Long idAddress;
+    private Long idAddressDTO;
     private int number;
     private int postalCode;
     private String way;
     private String additionalAddress;
     private String town;
-    private UserDTO user;
+    private UserDTO userDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdAddress() {
-        return idAddress;
+    public Long getIdAddressDTO() {
+        return idAddressDTO;
     }
 
-    public void setIdAddress(Long idAddress) {
-        this.idAddress = idAddress;
+    public void setIdAddressDTO(Long idAddressDTO) {
+        this.idAddressDTO = idAddressDTO;
     }
 
     public int getNumber() {
@@ -61,12 +61,12 @@ public class AddressDTO {
         this.town = town;
     }
 
-    public UserDTO getUser() {
-        return user;
+    public UserDTO getUserDTO() {
+        return userDTO;
     }
 
-    public void setUser(UserDTO user) {
-        this.user = user;
+    public void setUserDTO(UserDTO userDTO) {
+        this.userDTO = userDTO;
     }
 
 

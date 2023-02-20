@@ -4,20 +4,20 @@ import java.util.Date;
 
 public class UserHistoricDTO {
 
-    private Long idUserHistoric;
+    private Long idUserHistoricDTO;
     private Date startDate;
     private Date endDate;
-    private UserDTO user;
+    private UserDTO userDTO;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdUserHistoric() {
-        return idUserHistoric;
+    public Long getIdUserHistoricDTO() {
+        return idUserHistoricDTO;
     }
 
-    public void setIdUserHistoric(Long idUserHistoric) {
-        this.idUserHistoric = idUserHistoric;
+    public void setIdUserHistoricDTO(Long idUserHistoricDTO) {
+        this.idUserHistoricDTO = idUserHistoricDTO;
     }
 
     public Date getStartDate() {
@@ -36,12 +36,12 @@ public class UserHistoricDTO {
         this.endDate = endDate;
     }
 
-    public UserDTO getUser() {
-        return user;
+    public UserDTO getUserDTO() {
+        return userDTO;
     }
 
-    public void setUser(UserDTO user) {
-        this.user = user;
+    public void setUserDTO(UserDTO userDTO) {
+        this.userDTO = userDTO;
     }
 
 

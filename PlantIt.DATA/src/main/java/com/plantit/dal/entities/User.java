@@ -66,10 +66,10 @@ public class User {
     @OneToMany(mappedBy="godFather")
     private Set<User> godFatherCollection;
 
-    @ManyToMany
+    @ManyToMany(mappedBy="userCollection")
     private Set<Maintenance> maintenanceCollection;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy="user")
     private Set<CreatedBy> createdByCollection;
 
     @OneToMany(mappedBy="user")

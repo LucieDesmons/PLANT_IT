@@ -4,37 +4,37 @@ import java.util.Date;
 
 public class ManageDTO {
 
-    private Long idManage;
-    private UserDTO idUserCustomer;
-    private UserDTO idUserBotanist;
+    private Long idManageDTO;
+    private UserDTO idUserCustomerDTO;
+    private UserDTO idUserBotanistDTO;
     private Date startDate;
     private Date endDate;
 
 
     /***** GETTER & SETTER *****/
 
-    public Long getIdManage() {
-        return idManage;
+    public Long getIdManageDTO() {
+        return idManageDTO;
     }
 
-    public void setIdManage(Long idManage) {
-        this.idManage = idManage;
+    public void setIdManageDTO(Long idManageDTO) {
+        this.idManageDTO = idManageDTO;
     }
 
-    public UserDTO getIdUserCustomer() {
-        return idUserCustomer;
+    public UserDTO getIdUserCustomerDTO() {
+        return idUserCustomerDTO;
     }
 
-    public void setIdUserCustomer(UserDTO idUserCustomer) {
-        this.idUserCustomer = idUserCustomer;
+    public void setIdUserCustomerDTO(UserDTO idUserCustomerDTO) {
+        this.idUserCustomerDTO = idUserCustomerDTO;
     }
 
-    public UserDTO getIdUserBotanist() {
-        return idUserBotanist;
+    public UserDTO getIdUserBotanistDTO() {
+        return idUserBotanistDTO;
     }
 
-    public void setIdUserBotanist(UserDTO idUserBotanist) {
-        this.idUserBotanist = idUserBotanist;
+    public void setIdUserBotanistDTO(UserDTO idUserBotanistDTO) {
+        this.idUserBotanistDTO = idUserBotanistDTO;
     }
 
     public Date getStartDate() {
